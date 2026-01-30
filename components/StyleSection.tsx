@@ -137,26 +137,17 @@ const StyleCard: React.FC<{ item: StyleItem }> = ({ item }) => {
       {/* 오버레이 - 기본 어둡게, 호버 시 밝게 */}
       <div className="absolute inset-0 bg-text-primary/70 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-out" />
 
-      {/* 상단 라벨 */}
-      <div className="absolute top-0 left-0 right-0 p-4 md:p-6">
-        <div className="inline-block bg-white/95 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 shadow-lg">
-          <span className="text-xs tracking-[0.25em] md:tracking-[0.3em] font-medium text-text-primary">
-            {item.title}
-          </span>
-        </div>
-      </div>
-
-      {/* 하단 텍스트 */}
-      <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8">
-        <div className="transform translate-y-0 group-hover:translate-y-4 transition-all duration-500 ease-out">
-          <h3 className="text-white font-bold text-xl md:text-2xl tracking-widest uppercase mb-2 drop-shadow-lg">
-            {item.title}
-          </h3>
-          <span className="inline-block text-xs text-white/90 border border-white/60 px-2 py-1 uppercase tracking-wider drop-shadow-md">
-            {item.category}
-          </span>
-        </div>
-      </div>
+      {/* 하단 텍스트 - hover 시에만 보임 */}
+<div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out">
+  <div className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out">
+    <h3 className="text-white font-bold text-xl md:text-2xl tracking-widest uppercase mb-2 drop-shadow-lg">
+      {item.title}
+    </h3>
+    <span className="inline-block text-xs text-white/90 border border-white/60 px-2 py-1 uppercase tracking-wider drop-shadow-md">
+      {item.category}
+    </span>
+  </div>
+</div>
     </motion.div>
   );
 };

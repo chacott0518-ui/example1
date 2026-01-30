@@ -23,7 +23,7 @@ const timer2 = setTimeout(() => setStage(2), 5000);
         {cols.map((_, i) => (
           <motion.div
             key={i}
-            className="relative w-[10vw] h-full overflow-hidden border-r border-white/10"
+            className="relative w-[10vw] h-full overflow-hidden"
             initial={{ y: i % 2 === 0 ? '-100%' : '100%' }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 2, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
