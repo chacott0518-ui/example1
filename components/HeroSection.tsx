@@ -40,7 +40,12 @@ const timer2 = setTimeout(() => setStage(2), 5000);
       {/* 아주 약한 오버레이 */}
       <motion.div
         className="absolute inset-0 z-10"
-        style={{ background: 'rgba(0, 0, 0, 0.08)' }}
+        style={{ 
+    background: `
+  radial-gradient(ellipse at center, transparent 25%, rgba(0, 0, 0, 0.55) 75%),
+  linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, transparent 45%, transparent 55%, rgba(0, 0, 0, 0.75) 100%)
+`
+  }}
         initial={{ opacity: 0 }}
         animate={{ opacity: stage >= 1 ? 1 : 0 }}
         transition={{ duration: 1.5 }}
@@ -51,10 +56,11 @@ const timer2 = setTimeout(() => setStage(2), 5000);
           <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
             <div className="flex flex-col items-center justify-center space-y-6 text-center select-none">
               <motion.h1
-  className="text-5xl md:text-7xl lg:text-9xl tracking-tight font-serif font-bold text-text-primary"
+  className="text-5xl md:text-7xl lg:text-9xl tracking-tight font-serif font-bold"
   style={{
-    textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.4), 0 8px 32px rgba(0,0,0,0.3), 0 0 2px rgba(255,255,255,0.8)',
-    WebkitTextStroke: '0.5px rgba(255,255,255,0.3)'
+    color: '#FFF5E1',
+    textShadow: '0 4px 20px rgba(0, 0, 0, 0.6)',
+    filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4))'
   }}
   initial={{ scale: 0, opacity: 0 }}
   animate={{ scale: 1, opacity: 1 }}
@@ -64,10 +70,11 @@ const timer2 = setTimeout(() => setStage(2), 5000);
 </motion.h1>
 
               <motion.h1
-  className="text-5xl md:text-7xl lg:text-9xl tracking-tight font-serif font-bold text-text-primary"
+  className="text-5xl md:text-7xl lg:text-9xl tracking-tight font-serif font-bold"
   style={{
-    textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.4), 0 8px 32px rgba(0,0,0,0.3), 0 0 2px rgba(255,255,255,0.8)',
-    WebkitTextStroke: '0.5px rgba(255,255,255,0.3)'
+    color: '#FFF5E1',
+    textShadow: '0 4px 20px rgba(0, 0, 0, 0.6)',
+    filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4))'
   }}
   initial={{ scale: 0, opacity: 0 }}
   animate={{ scale: 1, opacity: 1 }}
@@ -83,19 +90,21 @@ const timer2 = setTimeout(() => setStage(2), 5000);
   transition={{ delay: 0.6, duration: 0.8 }}
 >
   <p 
-    className="text-base md:text-lg lg:text-xl text-text-primary leading-loose text-center font-medium"
-    style={{
-      textShadow: '0 2px 6px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.5), 0 0 1px rgba(255,255,255,0.8)',
-      WebkitTextStroke: '0.3px rgba(255,255,255,0.2)'
-    }}
-  >
+  className="text-base md:text-lg lg:text-xl leading-loose text-center font-medium"
+  style={{
+    color: '#FFF0F5',
+    textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)',
+    filter: 'drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4))'
+  }}
+>
                   당신만의 고유한 아름다움을 발견하는 여정,
                 </p>
                 <p 
-  className="text-base md:text-lg lg:text-xl text-text-primary leading-loose mt-2 text-center font-medium"
+  className="text-base md:text-lg lg:text-xl leading-loose mt-2 text-center font-medium"
   style={{
-    textShadow: '0 2px 6px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.5), 0 0 1px rgba(255,255,255,0.8)',
-    WebkitTextStroke: '0.3px rgba(255,255,255,0.2)'
+    color: '#FFF0F5',
+    textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)',
+    filter: 'drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4))'
   }}
 >
                   전문가의 손길로 완성되는 완벽한 스타일링을 경험하세요.
